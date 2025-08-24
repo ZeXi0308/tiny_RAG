@@ -288,24 +288,6 @@ python demo.py
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-## 🙏 致谢
-
-- [FAISS](https://github.com/facebookresearch/faiss) - 高效向量检索
-- [Sentence Transformers](https://github.com/UKPLab/sentence-transformers) - 语义嵌入
-- [rank-bm25](https://github.com/dorianbrown/rank_bm25) - BM25 实现
-- [FastAPI](https://github.com/tiangolo/fastapi) - 现代 Web 框架
-- [LangChain](https://github.com/langchain-ai/langchain) - LLM 应用框架
-
-## 📞 联系方式
-
-- 作者: 赵振宇
-- 邮箱: zhenyu.zhao@mail.polimi.it
-- 项目链接: [https://github.com/your-username/OneTinyRAG](https://github.com/your-username/OneTinyRAG)
-
----
-
-<div align="center">
-
 **⭐ 如果这个项目对你有帮助，请给个 Star！⭐**
 
 </div>
