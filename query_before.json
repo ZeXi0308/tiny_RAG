@@ -1,0 +1,50 @@
+{
+    "task_analysis": {
+        "domain": "烹饪",
+        "complexity": "low",
+        "suggestions": "烹饪领域建议使用基本步骤和常见词汇，确保信息准确无误。",
+        "required_steps": [
+            "intent_analysis",
+            "query_rethink",
+            "synonym_generation",
+            "combined_query"
+        ]
+    },
+    "intent_analysis": {
+        "intent_type": [
+            "烹饪方法"
+        ],
+        "core_entity": [
+            "西红柿炒蛋"
+        ],
+        "required_steps": [
+            "query_rethink",
+            "synonym_generation",
+            "combined_query"
+        ]
+    },
+    "query_rethink": {
+        "standard_queries": [
+            "(西红柿炒蛋怎么做的？)"
+        ],
+        "required_steps": [
+            "synonym_generation",
+            "combined_query"
+        ]
+    },
+    "synonym_generation": {
+        "synonyms": [
+            "怎么做西红柿炒蛋",
+            "西红柿炒蛋的做法"
+        ],
+        "generation_rules": "将'怎么做'替换为'如何制作'，并保持核心实体不变。",
+        "required_steps": [
+            "query_rethink",
+            "combined_query"
+        ]
+    },
+    "combined_query": {
+        "final_query": "(西红柿炒蛋怎么做的？)",
+        "required_steps": []
+    }
+}

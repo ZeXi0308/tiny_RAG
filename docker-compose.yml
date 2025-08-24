@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  tiny-rag:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app/OneTinyRAG
+      - HF_HOME=/app/.cache/huggingface
+      - TRANSFORMERS_CACHE=/app/.cache/huggingface/transformers
+      - HF_ENDPOINT=https://hf-mirror.com  # 国内镜像加速
+    volumes:
+      - ./OneTinyRAG/Dataset:/app/OneTinyRAG/Dataset:ro  # 只读挂载数据集
+      - ./OneTinyRAG/Config:/app/OneTinyRAG/Config:ro    # 只读挂载配置
+      - model_cache:/app/.cache/huggingface              # 模型缓存持久化
+      - ./logs:/app/logs                                 # 日志持久化
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # 可选：Redis 缓存服务（未来扩展用）
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    profiles: ["with-cache"]  # 通过 --profile with-cache 启用
+
+volumes:
+  model_cache:
+    driver: local
+  redis_data:
+    driver: local

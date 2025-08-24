@@ -1,0 +1,28 @@
+# Core RAG Dependencies
+faiss-cpu==1.9.0.post1
+langchain==0.3.22
+langchain_community==0.3.20
+langchain-ollama==0.2.3
+numpy==1.26.4
+openai==1.70.0
+sentence_transformers==3.4.0
+
+# Document Processing & Chunking
+PyPDF2==3.0.1
+spacy==3.7.5
+nltk==3.9.1
+jieba==0.42.1
+
+# Ollama Client
+ollama==0.5.3
+
+# FastAPI Service Dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# Additional Utilities
+tqdm==4.66.1
+python-dotenv==1.0.0
+requests==2.31.0
