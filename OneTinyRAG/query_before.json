@@ -1,0 +1,62 @@
+{
+    "task_analysis": {
+        "domain": [
+            "通用"
+        ],
+        "complexity": [
+            {
+                "level": "low",
+                "desc": "单实体查询"
+            }
+        ],
+        "suggestions": "烹饪领域建议：西红柿炒蛋通常需要准备新鲜的西红柿、鸡蛋以及一些调味料，步骤包括炒蛋、炒西红柿并混合均匀。",
+        "required_steps": [
+            "intent_analysis",
+            "query_rethink",
+            "synonym_generation",
+            "combined_query"
+        ]
+    },
+    "intent_analysis": {
+        "intent_type": [
+            "烹饪食谱"
+        ],
+        "core_entity": [
+            "西红柿炒蛋"
+        ],
+        "required_steps": [
+            "query_rethink",
+            "synonym_generation",
+            "combined_query"
+        ],
+        "confidence": 0.9
+    },
+    "query_rethink": {
+        "standard_queries": [
+            "西红柿炒蛋的做法",
+            "如何做西红柿炒蛋"
+        ],
+        "required_steps": [
+            "synonym_generation",
+            "combined_query"
+        ],
+        "confidence": 0.92
+    },
+    "synonym_generation": {
+        "synonyms": [
+            "炒西红柿和鸡蛋的步骤",
+            "西红柿炒蛋的具体做法"
+        ],
+        "generation_rules": "将专业术语与日常用语结合，如“炒”、“制作”等。",
+        "required_steps": [
+            "query_rethink",
+            "combined_query"
+        ],
+        "confidence": 0.93
+    },
+    "combined_query": {
+        "final_query": "(西红柿 + 炒蛋)的做法",
+        "required_steps": [],
+        "confidence": 0.85
+    }
+}

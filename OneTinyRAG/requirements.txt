@@ -1,0 +1,21 @@
+# macOS/ARM 推荐：用 conda 安装 faiss-cpu（已在环境中安装）
+# pip 侧保留占位但不强制
+faiss
+# faiss_cpu==1.9.0.post1  # 建议用 conda: conda install -c conda-forge faiss-cpu
+# faiss_gpu==1.7.2        # 不适配 macOS/ARM，移除
+
+langchain==0.3.22
+langchain_community==0.3.20
+langchain-ollama==0.2.3
+numpy==1.26.4
+openai==1.70.0
+sentence_transformers==3.4.0
+
+# 解析与分块依赖
+PyPDF2==3.0.1
+spacy==3.7.5
+nltk==3.9.1
+jieba==0.42.1
+
+# ollama 客户端
+ollama==0.5.3
