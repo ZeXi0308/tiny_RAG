@@ -300,7 +300,7 @@ python demo.py
 
 - 作者: 赵振宇
 - 邮箱: zhenyu.zhao@mail.polimi.it
-- 项目链接: [https://github.com/your-username/OneTinyRAG](https://github.com/your-username/OneTinyRAG)
+- 项目链接: [https://github.com/ZeXi0308/tiny_RAG](https://github.com/ZeXi0308/tiny_RAG)
 
 ---
 
